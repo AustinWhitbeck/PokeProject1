@@ -13,9 +13,8 @@ const HomePage = () => {
     }
 
     const handleGetOnePokemon  =  async (pokemon) => {
-            const newPoke = await getAPokemon(pokemon).then((result) => {
+            return await getAPokemon(pokemon.toLowerCase()).then((result) => {
                 setChosenPokemon(result.data);
-                console.log('result.data', result.data);
             })
         
     }

@@ -3,10 +3,9 @@ const axios = require('axios').default;
 
 export async function getAllPokemon() {
     try {
-      const response = await axios.get('https://pokeapi.co/api/v2/pokemon/');
-      console.log(response);
+      return await axios.get('https://pokeapi.co/api/v2/pokemon/');
     } catch (error) {
-      console.error(error);
+      return error;
     }
   }
 
@@ -14,6 +13,6 @@ export async function getAllPokemon() {
     try {
       return axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
     } catch (error) {
-      console.error(error);
+      return error;
     }
   }
